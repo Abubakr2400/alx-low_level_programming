@@ -1,22 +1,44 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * add - entry point
- *
- *Description: function that adds two integers and
- * returns the result.
- *
- * @n1: integer on
- * @n2: integer two
- *
- * Return:sum.
- *
+ * print_to_98 - Prints all natural numbers from n to 98
+ * @n: The number to start printing from
+ * Return: Always 0
  */
 
-int add(int n1, int n2)
+void print_to_98(int n)
 {
-	int sum;
-
-	sum = n1 + n2;
-	return (sum);
+        if (n <+ 98)
+        {
+                for (; n <=98; n++)
+                {
+                        if (n == 98)
+                        {
+                                printf("%d",n);
+                                printf("\n");
+                                break;
+                        }
+                        else
+                        {
+                                printf("%d, ",n);
+                        }
+                }
+        }
+        else
+        {
+                for (; n>=98; n--)
+                {
+                        if (n == 98)
+                        {
+                                printf("%d",n);
+                                printf("\n");
+                                break;
+                        }
+                        else
+                        {
+                                printf("%d, ",n);
+                        }
+                }
+        }
 }
