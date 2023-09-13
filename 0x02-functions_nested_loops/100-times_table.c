@@ -1,45 +1,43 @@
 #include "main.h"
 
-#include <stdio.h>
-
 /**
- * print_to_98 - print a program to 98
- * @n: The number to start printing
- * Return: Always 0.
- */
+  * print_times_table - printsthe times inputed
+  * starting with 0.
+  *@n: the value of the timea table printed
+  */
 
-void print_to_98(int n)
+void print_times_table(int n)
 {
-	if (n <= 98)
+
+	int num, mult, prod;
+
+	if (n >= 0 && n <= 15)
 	{
-	for (; n <= 98; n++)
+	for (num = 0; num <= n; num++)
 	{
-	if (n == 98)
+	_putchar('0');
+	for (mult = 1; mult <= n; mult++)
 	{
-	printf("%d", n);
-	printf("\n");
-	break;
+	_putchar(',');
+	_putchar(' ');
+	prod = num * mult;
+	if (prod <= 99)
+	_putchar(' ');
+	if (prod <= 9)
+	_putchar(' ');
+	if (prod >= 100)
+	{
+	_putchar((prod / 100) + '0');
+	_putchar(((prod / 10)) % 10 + '0');
 	}
-	else
+	else if (prod <= 99 && prod >= 10)
 	{
-	printf("%d, ", n);
+	_putchar((prod / 10) + '0');
 	}
+	_putchar((prod % 10) + '0');
 	}
-	}
-	else
-	{
-	for (; n >= 98; n--)
-	{
-	if (n == 98)
-	{
-	printf("%d", n);
-	printf("\n");
-	break;
-	}
-	else
-	{
-		printf("%d, ", n);
-	}
+	_putchar('\n');
 	}
 	}
 }
+
