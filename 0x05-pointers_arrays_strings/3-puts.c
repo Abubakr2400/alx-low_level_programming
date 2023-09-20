@@ -14,3 +14,7 @@ _putchar(*str++);
 
 _putchar('\n');
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7d6719b8aa737815ffe110f8ffb890c412dc1d72
